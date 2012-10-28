@@ -4,11 +4,11 @@ describe 'We::Rspec::link' do
 
     we enable: :linking
 
-    expect {
+    expect do
 
       We::RSpec::Link.new.inject( link: 'controllers/hydraulics' )
 
-    }.to raise_error LoadError, 
+    end.to raise_error LoadError, 
 
     /file -- controllers\/hydraulics_spec.rb/
 
