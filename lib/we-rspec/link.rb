@@ -2,7 +2,7 @@ module We
 
   module RSpec
 
-    class Link < We::Fragment
+    class Link < We::Node
 
       class_eval do
 
@@ -14,7 +14,16 @@ module We
 
         super
 
-        data[:additional_metadata] = :more
+        #
+        # walk over the fragment edge
+        #
+
+        enter if (
+
+          We::enabled? :walking and 
+          We::enabled? :linking
+
+        )
 
       end
 
