@@ -11,4 +11,4 @@ group :development, :test do
   gem 'awesome_print'
 end
 
-gem 'we', :git => "git@github.com:nomilous/we.git", :branch => "feature/linking"
+gem 'we', :git => "git@github.com:nomilous/we.git", :branch => "feature/actions"

@@ -1,5 +1,6 @@
 require 'we'
 require 'we-rspec/link'
+require 'we-rspec/action'
 
 #
 # override end to show tree

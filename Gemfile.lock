@@ -1,7 +1,7 @@
 GIT
   remote: git@github.com:nomilous/we.git
-  revision: 9a04765453b7aac2e34d20a5b4ca4f1ad9727c5c
-  branch: feature/linking
+  revision: e18fa81d21752e29bba3432004d62b7c9ab46c37
+  branch: feature/actions
   specs:
     we (0.0.2)
 
