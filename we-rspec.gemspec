@@ -8,5 +8,6 @@ Gem::Specification.new do |spec|
   spec.summary = %q{RSpec extensions for we.gem}
   spec.homepage = %q{https://github.com/nomilous/we-rspec}
   spec.description = %q{}
+  spec.add_runtime_dependency 'we'
   spec.files = `git ls-files`.strip.split("\n")
 end
