@@ -5,8 +5,8 @@ module We
     class Link < We::Fragment
 
       class_eval do
-        
-        We::defined[:rspec_link] = self
+
+        We::defined[:link] = self
 
       end
 
