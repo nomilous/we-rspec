@@ -6,7 +6,7 @@ describe 'We::Rspec::link' do
 
     expect do
 
-      We::RSpec::Link.new.inject( link: 'controllers/hydraulics' )
+      We::RSpec::Link.new.inject link: 'controllers/hydraulics'
 
     end.to raise_error LoadError, 
 
