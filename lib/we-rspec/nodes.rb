@@ -4,6 +4,12 @@ module We
 
     class Component < We::Node
 
+      class_eval do
+
+        We::defined[:component] = self
+
+      end
+
       def inject( args )
 
         super
@@ -29,14 +35,10 @@ module We
 end
 
 
-We::action! component: lambda {
-
-              STDOUT << "\n\n...........action\n\n"
-
-            }, 
-            node_class: We::RSpec::Component do
+We::action! component: lambda { puts "...lambda" } do
               
-              STDOUT << "\n\n...........action block\n\n"
+  puts "...block"
+  puts "go to bed you fool!"
+  gets sleep
 
-            end
-
+end
