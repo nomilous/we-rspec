@@ -1,6 +1,6 @@
 require 'config/rspec'  # guard is doing this
 
-we document: 'Test Results' do
+we component: 'Test Results' do
 
   describe 'Results' do
 

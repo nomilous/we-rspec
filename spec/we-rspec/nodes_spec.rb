@@ -1,4 +1,4 @@
-describe We::RSpec::Action do
+describe We::RSpec::Component do
 
   it 'either gets rspec test results' do
 
