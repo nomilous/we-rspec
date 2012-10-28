@@ -2,28 +2,21 @@ module We
 
   module RSpec
 
-    class Link < We::Node
+    class Link < ::We::Link
 
       class_eval do
+
+        #
+        # override linker to this: We::RSpec::Link
+        #
 
         We::defined[:link] = self
 
       end
 
-      def inject( args )
+      def traverse
 
-        super
-
-        #
-        # walk over the fragment edge
-        #
-
-        enter if (
-
-          We::enabled? :walking and 
-          We::enabled? :linking
-
-        )
+        require "#{data[:_tag]}_spec.rb"
 
       end
 
