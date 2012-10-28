@@ -8,7 +8,7 @@
 
                     describe We::RSpec do
 
-                        it 'sends updates' do
+                        it 'reports back' do
 
                             We::should_receive( :captains_log ).with( stardate, message )
 
@@ -20,9 +20,9 @@
                               
                             we rotate: 'chaos manifold', in: [3,2,1,
 
-                        begin
+                        uıƃǝq
 
-                    begin
+                    uıƃǝq
 
 
 
