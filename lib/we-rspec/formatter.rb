@@ -17,18 +17,24 @@ module We
       end
 
       def example_started( example )
-        We::push rspec_test: example.description
       end
 
       def example_pending( example )
-        We::pop
+        we :rspec_test => example.description, 
+           :state => :pending,
+           :done => false
       end
 
       def example_failed( example )
+        we :rspec_test => example.description, 
+           :state => :failed,
+           :done => false
       end
 
       def example_passed( example )
-        We::pop
+        we :rspec_test => example.description, 
+           :state => :passed,
+           :done => true
       end
 
       def message( message )
