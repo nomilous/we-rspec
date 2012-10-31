@@ -8,12 +8,6 @@ describe We::RSpec::Node do
 
   end
 
-  it 'knows file path' do
-
-    
-
-  end
-
   context 'Test node' do
 
     #
@@ -23,9 +17,20 @@ describe We::RSpec::Node do
 
     it 'knows of pending'
 
-    it 'knows of test' do; end
+    it 'knows of test' do; 
+      true.should == false
+    end
 
     xit 'knows of disabled' do; end
+
+    #
+    # rspec --color --format doc -r config/rspec spec/we-rspec/nodes_spec.rb:29
+    #
+    it 'still nests contexts when run "rspec file:<line_num>"' do 
+
+      # nice!!
+
+    end
 
   end
 
