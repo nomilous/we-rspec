@@ -53,6 +53,8 @@ module We
 
           end
 
+          @data[:_phase] = :implement
+
         end
 
       end
@@ -71,7 +73,6 @@ module We
 
           @data[:_type] = :document
           @data[:_class] = :master
-          @data[:_phase] = :implement
 
         end
 

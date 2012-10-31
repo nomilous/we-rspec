@@ -58,7 +58,6 @@ module We
       end
 
       def close
-        ap We::tree
       end
 
     end
