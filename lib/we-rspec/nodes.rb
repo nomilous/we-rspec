@@ -12,6 +12,16 @@ module We
 
     end
 
+    class Context < We::Node
+
+      self.class_eval do
+        
+        We::defined[:rspec_context] = self
+        
+      end
+
+    end
+
   end
 
 end

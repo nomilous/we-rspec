@@ -11,9 +11,11 @@ module We
       end
 
       def example_group_started( example_group )
+        We::push :rspec_context => example_group.description
       end
 
       def example_group_finished( example_group )
+        We::pop
       end
 
       def example_started( example )

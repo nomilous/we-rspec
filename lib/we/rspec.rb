@@ -27,10 +27,7 @@ end
 # receive inline test results
 #
 
-
 RSpec::configure do |config|
-
-  ap config
 
   config.add_formatter We::RSpec::Formatter
 
