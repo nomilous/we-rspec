@@ -17,9 +17,7 @@ describe We::RSpec::Node do
 
     it 'knows of pending'
 
-    it 'knows of test' do; 
-      true.should == false
-    end
+    it 'knows of test' do; end
 
     xit 'knows of disabled' do; end
 

@@ -10,14 +10,11 @@ module We
       end
 
       def example_group_started( example_group )
-        ap "START #{example_group}"
         We::push :rspec_context => example_group.description,
                  :_file_path => example_group.file_path
       end
 
       def example_group_finished( example_group )
-        ap "END #{example_group}"
-        
         We::pop
       end
 
@@ -58,9 +55,6 @@ module We
       end
 
       def dump_summary( duration, example_count, failure_count, pending_count )
-
-        ap "...dump_summary( #{duration}, #{example_count}, #{failure_count}, #{pending_count} )"
-      
       end
 
       def close

@@ -57,6 +57,26 @@ module We
 
       end
 
+      class Implement < Context
+
+        self.class_eval do
+          
+          We::defined[:implement] = self
+          
+        end
+
+        def inject( args )
+
+          super
+
+          @data[:_type] = :document
+          @data[:_class] = :master
+          @data[:_phase] = :implement
+
+        end
+
+      end
+
     end
 
   end
