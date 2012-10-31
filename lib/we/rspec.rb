@@ -1,6 +1,6 @@
 require 'we'
+require 'we-rspec/formatter'
 require 'we-rspec/link'
-require 'we-rspec/nodes'
 
 #
 # override end to show tree
