@@ -1,6 +1,7 @@
 require 'we'
 require 'we-rspec/formatter'
 require 'we-rspec/link'
+require 'we-rspec/nodes'
 
 module We
 
@@ -17,5 +18,20 @@ module We
     end
 
   end
+
+end
+
+
+#
+# Assign We::RSpec::Formatter to 
+# receive inline test results
+#
+
+
+RSpec::configure do |config|
+
+  ap config
+
+  config.add_formatter We::RSpec::Formatter
 
 end
