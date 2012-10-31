@@ -2,22 +2,59 @@ module We
 
   module RSpec
 
-    class Test < We::Node
+    module NodeContext
 
-      self.class_eval do
-        
-        We::defined[:rspec_test] = self
-        
+      class << self
+
+        def file_path( path = nil )
+
+          @file_path = path if path
+          @file_path 
+
+        end
+
       end
 
     end
 
-    class Context < We::Node
+    module Node
 
-      self.class_eval do
-        
-        We::defined[:rspec_context] = self
-        
+      class Test < We::Node
+
+        self.class_eval do
+          
+          We::defined[:rspec_test] = self
+          
+        end
+
+      end
+
+      class Context < We::Node
+
+        self.class_eval do
+          
+          We::defined[:rspec_context] = self
+          
+        end
+
+        def inject( args )
+
+          super
+
+          if args[:_file_path] != We::RSpec::NodeContext::file_path
+
+            We::RSpec::NodeContext::file_path args[:_file_path]
+
+            # 
+            # new spec file becomes :fragment
+            #
+
+            @data[:_type] = :fragment
+
+          end
+
+        end
+
       end
 
     end
@@ -25,4 +62,3 @@ module We
   end
 
 end
-

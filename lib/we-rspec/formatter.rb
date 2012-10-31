@@ -7,14 +7,17 @@ module We
       def initialize( output ); end
 
       def start( test_count )
-        We::push :fragment
       end
 
       def example_group_started( example_group )
-        We::push :rspec_context => example_group.description
+        ap "START #{example_group}"
+        We::push :rspec_context => example_group.description,
+                 :_file_path => example_group.file_path
       end
 
       def example_group_finished( example_group )
+        ap "END #{example_group}"
+        
         We::pop
       end
 
@@ -43,7 +46,6 @@ module We
       end
 
       def stop
-        We::pop
       end
 
       def start_dump
